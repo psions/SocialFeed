@@ -10,8 +10,8 @@ const Post = ({post}) => {
         {post.text}
         </p>
 
-        <button>ClickMe</button>
-        <button>ClickMe</button>
+        <button>Like</button>
+        <button>Dislike</button>
     </div> );
 }
  
