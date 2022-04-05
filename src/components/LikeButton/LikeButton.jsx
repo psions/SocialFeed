@@ -3,7 +3,7 @@ import "./LikeButton.css"
 
 const LikeButton = (props) => {
 
-    const[buttonClass, setButtonClass] = useState("inactive")
+    const[buttonClass, setButtonClass] = useState("active")
 
     function handleClick(){
         if(buttonClass === "inactive"){
