@@ -12,7 +12,7 @@ const DisplayPost = (props) => {
 
 
     return ( 
-        <form onSubmit= {handleSubmit}>
+        <form onSubmit= 'handleSubmit'>
             <label>First Name </label>
             <input type= 'text' onChange={(event) => setFirstName(event.target.value)} value ={firstName}/>
             <label>Comment </label>
