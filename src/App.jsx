@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import DisplayEntries from "./components/DisplayEntries/DisplayEntries";
+import DisplayEntries from "./DisplayEntries/DisplayEntries";
 import CreatePost from "./CreatePost";
-
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import { Navbar } from "react-bootstrap";
 
 function App() {
 
@@ -14,8 +15,7 @@ function App() {
     
     setEntries(tempEntries)
   }
- 
- 
+
   return (
     <div >
       <DisplayEntries parentEntries={entries}/>
@@ -25,5 +25,19 @@ function App() {
   );
 }
 
-export default App;
+  function LikeButton(){
+
+    return(
+      <div className="LikeButton">
+        <br/>
+        <h2>Like Button Click</h2>
+        <br/>
+        <LikeButton message = "Like"/>
+
+      </div>
+    )
+
+  }
+  
+export default {App,LikeButton};
 
