@@ -4,7 +4,7 @@ import CreatePost from "./CreatePost";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import LikeButton from './components/LikeButton/LikeButton';
 import DisplayPost from './components/DisplayPost';
-
+import './App.css'
 function App() {
 
   const [entries, setEntries] = useState([{name: 'Madara', text: 'Wake up to reality! Nothing ever goes as planned in this world. The longer you live, the more you realize that in this reality, only pain, suffering, and futility exist.'},
@@ -18,9 +18,26 @@ function App() {
   }
 
   return (
-    <div >
+    <div className='container-fluid'>
+      <div className='row'>
+        <div classNmae='col-md-6'>
+          <div className= 'border-box'>
+            <DisplayEntries parentEntries={entries}/>
+          </div>
+            <div className= 'border-box'>
+              <CreatePost addNewEntryProperty = {addNewEntry} />
+            </div>
+           
+
+        </div>
+        <div classNmae='col-md-6'>
+          <div className='border-box'>
+            <CreatePost addNewEntryProperty = {addNewEntry} />
+          </div>
+        </div>
+      </div>
       <DisplayEntries parentEntries={entries}/>
-      <CreatePost addNewEntryProperty = {addNewEntry} />
+      
       <LikeButton />
       <DisplayPost />
     </div>
