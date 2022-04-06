@@ -14,6 +14,8 @@ const DisplayEntries = (props) => {
                 return(
                     <tr key= {index}>
                         <td>{index + 1}</td>
+                        <td> {entry.name} </td>
+                        <td> {entry.text} </td>
                     </tr>
                 )
             })}

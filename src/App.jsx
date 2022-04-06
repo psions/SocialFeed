@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 import DisplayEntries from "./DisplayEntries/DisplayEntries";
 import CreatePost from "./CreatePost";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
@@ -9,10 +9,9 @@ import NavBar from './components/NavBar/NavBar';
 import MatrialUi from './components/MaterialUi/MaterialUi';
 
 function App() {
-  <MatrialUi/>
   const [entries, setEntries] = useState([{name: 'Madara', text: 'Wake up to reality! Nothing ever goes as planned in this world. The longer you live, the more you realize that in this reality, only pain, suffering, and futility exist.'},
   {name: 'Reiko Mikami ', text: 'It’s just pathetic to give up on something before you even give it a shot.'}])
- 
+  
   function addNewEntry(entry){
     
     let tempEntries = [entry, ...entries];
@@ -22,7 +21,8 @@ function App() {
   
   return (
     
-    <div className='container-fluid'>
+    <Fragment className='container-fluid'>
+      <MatrialUi/>
       
       <div className='row'>
         <div classNmae='col-md-6'>
@@ -40,7 +40,7 @@ function App() {
      
       <LikeButton />
       
-    </div>
+    </Fragment>
   );
 }
 
