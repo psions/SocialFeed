@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Typography, AppBar,Button, Card, CardActions, CardContent, CardMedia, CssBaseline, Grid, Toolbar, Container } from '@mui/material'
 import {PhotoCamera} from '@mui/icons-material';
 
+
+
 import useStyles from './styles';
 
 const cards= [1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -66,8 +68,14 @@ const MatrialUi = () => {
                                     </Typography>
                                 </CardContent>
                                 <CardActions>
-                                    <Button size="small" color= "primary">View</Button>
-                                    <Button size="small" color= "primary">Edit</Button>
+                                    <Button type="submit" 
+                                    size="small" 
+                                    color= "primary" 
+                                    variant="outlined">Like</Button>
+                                    <Button type="submit"
+                                     size="small" 
+                                    color= "secondary" 
+                                    variant="outlined">Dislike</Button>
                                 </CardActions>
                             </Card>
                         </Grid>
