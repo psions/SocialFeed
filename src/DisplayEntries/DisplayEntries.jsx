@@ -6,8 +6,7 @@ const DisplayEntries = (props) => {
         <table className="table">
             <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Comment</th>
+                    
                 </tr>
             </thead>
             <tbody>

@@ -17,6 +17,7 @@ const LikeButton = (props) => {
     return ( 
         <div>
             <button className={buttonClass} onClick={handleClick}>{props.message}</button>
+            
         </div>
      );
 }

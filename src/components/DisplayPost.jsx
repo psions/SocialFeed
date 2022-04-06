@@ -6,13 +6,16 @@ const DisplayPost = (props) => {
     const [comment, setComment] = useState('')
 
     function handleSubmit(formEvent){
-        formEvent.preventDefault();
+        
         alert('First Name: ${firstName} comment: ${comment}');
+        formEvent.preventDefault();
+        
+        
     }
 
 
     return ( 
-        <form onSubmit= 'handleSubmit'>
+        <form onSubmit= {handleSubmit}>
             <label>First Name </label>
             <input type= 'text' onChange={(event) => setFirstName(event.target.value)} value ={firstName}/>
             <label>Comment </label>
