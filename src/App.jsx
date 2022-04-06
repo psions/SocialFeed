@@ -6,10 +6,10 @@ import LikeButton from './components/LikeButton/LikeButton';
 import DisplayPost from './components/DisplayPost'
 import './App.css'
 import NavBar from './components/NavBar/NavBar';
-
+import MatrialUi from './components/MaterialUi/MaterialUi';
 
 function App() {
-
+  <MatrialUi/>
   const [entries, setEntries] = useState([{name: 'Madara', text: 'Wake up to reality! Nothing ever goes as planned in this world. The longer you live, the more you realize that in this reality, only pain, suffering, and futility exist.'},
   {name: 'Reiko Mikami ', text: 'It’s just pathetic to give up on something before you even give it a shot.'}])
  
