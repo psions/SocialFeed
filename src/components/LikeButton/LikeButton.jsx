@@ -3,20 +3,32 @@ import "./LikeButton.css"
 
 const LikeButton = (props) => {
 
-    const[buttonClass, setButtonClass] = useState("active")
+    const[likeButtonClass, setLikeButtonClass] = useState("inactive")
+    const[dislikeButtonClass, setDislikeButtonClass] = useState("inactive")
 
-    function handleClick(){
-        if(buttonClass === "inactive"){
-            setButtonClass("active");
-
+    function handleLike(){
+        if(likeButtonClass === "inactive"){
+            setLikeButtonClass("active");
+            setDislikeButtonClass("inactive")
         }
         else{
-            setButtonClass("inactive")
+            setLikeButtonClass("inactive")
+        }
+    }
+
+    function handleDislike(){
+        if(dislikeButtonClass === "inactive"){
+            setDislikeButtonClass("active");
+            setLikeButtonClass("inactive");
+        }
+        else{
+            setDislikeButtonClass("inactive")
         }
     }
     return ( 
         <div>
-            <button className={buttonClass} onClick={handleClick}>{props.message}</button>
+            <button className={likeButtonClass} onClick={handleLike}>Like</button>
+            <button className={dislikeButtonClass} onClick={handleDislike}>Dislike</button>
             
         </div>
      );

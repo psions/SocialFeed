@@ -1,4 +1,5 @@
 import Post from "../components/Post";
+import LikeButton from "../components/LikeButton/LikeButton"
 
 
 const DisplayEntries = (props) => {
@@ -16,6 +17,7 @@ const DisplayEntries = (props) => {
                         <td>{index + 1}</td>
                         <td> {entry.name} </td>
                         <td> {entry.text} </td>
+                        <LikeButton/>
                     </tr>
                 )
             })}
